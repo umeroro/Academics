@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Boolean</title>
+  <title>Rock</title>
 </head>
 <body>
   <p>
@@ -11,7 +11,7 @@
   </p>
   <!-- this is buttons  -->
   <button onclick="
-    playerMove('paper');
+    playerMove('rock');
     ">
 
     Rock
@@ -28,8 +28,35 @@
   ">
     Scissors
   </button>
+
+  <button onclick="
+    score.wincount = 0;
+    score.losecount = 0;
+    score.tiecount = 0;
+    localStorage.removeItem('score');
+  ">
+    reset score
+  </button>
   
   <script>
+
+    let score = JSON.parse(localStorage.getItem('score'))
+    || {
+      wincount : 0,
+      losecount : 0,
+      tiecount : 0
+    };
+
+    /*
+    if (!score) {
+      score = {
+        wincount : 0,
+        losecount : 0,
+        tiecount : 0
+      };
+    }
+    */
+
     // player move function
     function playerMove(move) {
       //compNum catch the return and this function run
@@ -62,7 +89,18 @@
         }
       }
 
-      alert(`You pick ${move} and computer pick ${compNum}. You ${result}`)
+      if (result === 'Win'){
+        score.wincount+=1;
+      } else if (result === 'Lose') {
+        score.losecount+=1;
+      } else if (result === 'Tie') {
+        score.tiecount+=1;
+      }
+
+      localStorage.setItem('score', JSON.stringify (score));
+
+      alert(`You pick ${move} and computer pick ${compNum}. You ${result}
+      Win : ${score.wincount} , Lose : ${score.losecount} , Tie : ${score.tiecount}`);
     }
     //computer pick the move
     function pickcompmove () {
@@ -78,6 +116,7 @@
       //after pick the move return it.
       return compNum;
     }
+    
   </script>
 </body>
 </html>
