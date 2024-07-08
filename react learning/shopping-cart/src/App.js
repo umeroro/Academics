@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Navbar from "./components/Navbar";
 import ProductList from "./components/ProductList";
 import Footer from "./components/Footer";
+import AddItem from "./components/AddItem";
 
 function App() {
   const products = [
@@ -37,8 +38,8 @@ function App() {
   };
   const resetQuantity = () => {
     let newProductList = [...productList];
-    newProductList.map((products) => {
-      products.quantity = 0;
+    newProductList.map(product =>{
+      product.quantity = 0;
     });
     setProductList(newProductList);
     setTotalAmount(0);
@@ -47,11 +48,20 @@ function App() {
     let newProductList = [...productList];
     let newTotalAmount = totalAmount;
     newTotalAmount -=
-      newProductList[index].quantity * newProductList[index].price;
+    newProductList[index].quantity * newProductList[index].price;
     newProductList.splice(index, 1);
     setProductList(newProductList);
     setTotalAmount(newTotalAmount);
   };
+  const addItem = (name, price) => {
+    let newProductList = [...productList];
+    newProductList.push({ 
+      name:name,
+      price:price, 
+      quantity: 0
+    });
+    setProductList(newProductList);
+  }
 
   const [productList, setProductList] = useState(products);
   const [totalAmount, setTotalAmount] = useState(0);
@@ -59,14 +69,15 @@ function App() {
   return (
     <>
       <Navbar />
-      <div className="container mt-5">
+      <main className="container mt-5">
+        <AddItem addItem={addItem} />
         <ProductList
           productList={productList}
           incrementQuantity={incrementQuantity}
           decrementQuantity={decrementQuantity}
           removeItem={removeItem}
         />
-      </div>
+      </main>
       <Footer totalAmount={totalAmount} resetQuantity={resetQuantity} />
     </>
   );
