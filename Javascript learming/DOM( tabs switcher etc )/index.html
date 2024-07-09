@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #img_off {
+        width: 200px;
+      }
+      #head-over {
+        width: 300px;
+      }
+      #h1_over {
+        background-color: red;
+        text-align: center;
+        color: #fff;
+      }
+      #head_click {
+        background-color: blue;
+        color: #fff;
+        width: 200px;
+        text-align: center;
+        padding: 10px;
+      }
+      .up {
+        display: flex;
+      }
+      #tabup1 {
+        box-shadow: 0px 10px 5px rgb(213, 211, 211);
+      }
+      #tabup1,
+      #tabup2,
+      #tabup3 {
+        text-align: center;
+        width: 390px;
+        border: 1px solid black;
+      }
+      .row-1,
+      .row-2,
+      .row-3 {
+        border: 1px solid black;
+      }
+      .p {
+        width: 1160px;
+      }
+      #row_2_p,
+      #row_3_p {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p id="para">This is the Paragraph</p>
+      <button id="Chng-style" onclick="chng_style()">Change style</button>
+    </div>
+    <div>
+      <button id="tu-on" onclick="tu_on()">Turn On</button>
+      <img id="img_off" src="images/off.jpg" />
+      <button id="tu-off" onclick="tu_off()">Turn Off</button>
+    </div>
+    <div id="head-over">
+      <h1 id="h1_over">Mouse Over me</h1>
+    </div>
+    <div id="head_click" onclick="clk_me()">CLick Me</div>
+    <div>
+      <button class="chk-date" onclick="chk_date()">Check Date</button>
+      <p id="demo1"></p>
+    </div>
+    <div class="tab">
+      <div class="up">
+        <div id="tabup1">
+          <h2 class="h1" id="up_1" onclick="up1()">Tab 1</h2>
+        </div>
+        <div id="tabup2">
+          <h2 class="h1" id="up_2" onclick="up2()">Tab 2</h2>
+        </div>
+        <div id="tabup3">
+          <h2 class="h1" id="up_3" onclick="up3()">Tab 3</h2>
+        </div>
+      </div>
+      <div class="down">
+        <div class="row-1">
+          <p class="p" id="row_1_p">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi
+            sapiente, consequuntur officiis autem qui, ducimus excepturi cumque
+            ea aspernatur tempora, odit dolorum eveniet cum repudiandae! Quae
+            praesentium nemo iure soluta. Lorem, ipsum dolor sit amet
+            consectetur adipisicing elit. Quaerat eveniet repudiandae, magni est
+            eligendi officia eum harum error placeat. Quos necessitatibus neque
+            magnam dicta sed, illo velit hic similique nesciunt?
+          </p>
+        </div>
+        <div class="row-2">
+          <p class="p" id="row_2_p">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt hic
+            libero quae quo recusandae reiciendis ipsa adipisci numquam
+            distinctio, sapiente deserunt officiis impedit et maxime similique
+            accusamus, dolores dolorem veniam. Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Quibusdam delectus quo fugit itaque
+            accusantium illo accusamus, autem, debitis voluptatibus harum
+            placeat consectetur, necessitatibus vel voluptatum esse doloribus
+            deleniti ullam. Amet?
+          </p>
+        </div>
+        <div class="row-3">
+          <p class="p" id="row_3_p">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem
+            reiciendis nulla, eveniet, dolore suscipit minus possimus, tenetur
+            odit blanditiis doloremque aspernatur recusandae. In praesentium
+            voluptatum, tempore eligendi expedita similique vero. Lorem ipsum
+            dolor sit amet consectetur, adipisicing elit. Magni, ducimus
+            inventore, ipsum aliquam amet id dicta aliquid natus illum animi
+            minima non itaque cupiditate, corporis quaerat quae at ea molestias!
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script src="file.js"></script>
+  </body>
+</html>
