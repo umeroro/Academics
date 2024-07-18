@@ -55,3 +55,7 @@ func1 = (x,y,z) => {
 }
 
 console.log(func1(...arra));
+
+array.forEach(element => {
+    //for each function
+});
