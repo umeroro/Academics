@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Testimonial</title>
+    <style>
+      body {
+        padding: 60px 40px;
+      }
+      .main {
+        display: flex;
+        width: 100%;
+      }
+      .one,
+      .two {
+        width: 50%;
+      }
+      .one{
+        background-image: url('https://unionsoftwaregroup.com/wp-content/uploads/2023/11/Group-4167-1.png');
+        background-repeat: no-repeat;
+        background-size: 70%;
+      }
+      #imgO {
+        width: 220px;
+        border-radius: 15px;
+      }
+      #imgT,
+      #imgTh {
+        width: 120px;
+        border-radius: 15px;
+      }
+      #imgO,
+      #imgT,
+      #imgTh{
+        transition: width 0.5s ease, transform 0.5s ease;
+      }
+      .top,
+      .middle,
+      .bottom {
+        overflow: hidden;
+      }
+      .top,
+      .bottom {
+        text-align: center;
+      }
+      p {
+        width: 60%;
+        font-size: 18px;
+        line-height: 25px;
+      }
+      .p2,
+      .p3 {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="one">
+        <div class="top">
+          <img
+            id="imgO"
+            src="https://unionsoftwaregroup.com/wp-content/uploads/2023/11/slide-3-2.png"
+          />
+        </div>
+        <div class="middle">
+          <img
+            id="imgT"
+            src="https://unionsoftwaregroup.com/wp-content/uploads/2023/11/sldie-2.png"
+          />
+        </div>
+        <div class="bottom">
+          <img
+            id="imgTh"
+            src="https://unionsoftwaregroup.com/wp-content/uploads/2023/11/slide1.png"
+          />
+        </div>
+      </div>
+      <div class="two">
+        <p class="p1">
+          It’s difficult to sell a company you’ve spent decades building, but
+          selling to the Union Software team was as seamless and friendly an
+          experience I could have imagined. I had heard of stories where buyers
+          change their agreement terms at the last minute, but the Union team
+          wasn’t like that at all. They always kept to their word and were
+          honest and high integrity throughout the entire process. The Union
+          team is the real deal and I’d highly recommend partnering with them.
+        </p>
+        <p class="p2">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda
+          cum iste sint adipisci quos voluptate facilis ad dolorem
+          exercitationem ipsam sunt obcaecati ullam pariatur odit, error
+          consequuntur veritatis, unde autem.
+        </p>
+        <p class="p3">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores
+          error commodi a necessitatibus, soluta incidunt eaque nemo earum
+          voluptatem dolores nisi! Ipsa explicabo corporis natus doloribus
+          necessitatibus, adipisci tempore commodi.lor. Lorem ipsum dolor sit
+          amet consectetur adipisicing elit. Quod deleniti facere, pariatur
+          quidem molestias corporis iste. Vel, cum vero nulla voluptas aliquid
+          itaque atque perspiciatis sint accusantium quas corporis in.
+        </p>
+      </div>
+    </div>
+
+    <script>
+      var imgOne = document.getElementById("imgO");
+      var imgTwo = document.getElementById("imgT");
+      var imgThree = document.getElementById("imgTh");
+      var p1 = document.querySelector('.p1');
+      var p2 = document.querySelector('.p2');
+      var p3 = document.querySelector('.p3');
+
+      imgOne.addEventListener("click", function () {
+        imgOne.style.width = "220px";
+        imgTwo.style.width = "120px";
+        imgThree.style.width = "120px";
+        p1.style.display = "block";
+        p2.style.display = "none";
+        p3.style.display = "none";
+      });
+      imgTwo.addEventListener("click", function () {
+        imgTwo.style.width = "220px";
+        imgOne.style.width = "120px";
+        imgThree.style.width = "120px";
+        p1.style.display = "none";
+        p2.style.display = "block";
+        p3.style.display = "none";
+      });
+      imgThree.addEventListener("click", function () {
+        imgOne.style.width = "120px";
+        imgTwo.style.width = "120px";
+        imgThree.style.width = "220px";
+        p1.style.display = "none";
+        p2.style.display = "none";
+        p3.style.display = "block";
+      });
+    </script>
+  </body>
+</html>
