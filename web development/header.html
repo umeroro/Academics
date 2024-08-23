@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .head {
+        width: 100%;
+        display: flex;
+        background-color: palegoldenrod;
+      }
+      #logo {
+        width: 30%;
+      }
+      #one {
+        width: 25%;
+        text-align: center;
+      }
+      #two {
+        width: 50%;
+        text-align: center;
+        align-self: center;
+      }
+      #three {
+        width: 25%;
+        text-align: center;
+        align-self: center;
+      }
+      .contact {
+        border: 1px solid black;
+        color: black;
+        padding: 12px 24px 12px 24px;
+        background-color: transparent;
+        border-radius: 25px;
+        font-size: 15px;
+        line-height: 15px;
+        font-weight: 500;
+        font-family: Arial, Helvetica, sans-serif;
+        transition: 0.1s;
+      }
+      .contact:hover {
+        background-color: black;
+        color: white;
+        cursor: pointer;
+      }
+      .ul {
+        list-style: none;
+      }
+      li {
+        display: inline;
+        margin: 0 20px 0 20px;
+        padding-bottom: 10px;
+        font-size: 15px;
+        font-weight: 400;
+        font-family: Arial, Helvetica, sans-serif;
+        border-bottom: 3px solid palegoldenrod;
+      }
+      li a {
+        display: inline-block;
+        text-decoration: none;
+        color: black;
+      }
+      li:hover {
+        cursor: pointer;
+        border-bottom: 3px solid black;
+      }
+      @media only screen and (min-width: 360px) and (max-width: 768px) {
+        .contact {
+          font-size: 13px;
+          line-height: 13px;
+        }
+        li {
+          font-size: 13px;
+          line-height: 13px;
+          padding-bottom: 7px;
+        }
+        #logo {
+          width: 28%;
+        }
+      }
+      @media only screen and (max-width: 360px) {
+        #one {
+          width: 20%;
+        }
+        #three {
+          width: 30%;
+        }
+        .contact {
+          font-size: 10px;
+          line-height: 10px;
+          padding: 8px 12px;
+        }
+        li {
+          font-size: 10px;
+          line-height: 10px;
+          padding-bottom: 5px;
+          margin: 0 5px;
+        }
+        #logo {
+          width: 50%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="head">
+      <div id="one">
+        <img
+          id="logo"
+          src="https://img.freepik.com/free-vector/golden-elegant-logo-flat-style_52683-17266.jpg?t=st=1722967966~exp=1722971566~hmac=f89e2b692cc3d96c9117a7e2c257f972e93d12565e3255fe93622785ba5940af&w=740"
+        />
+      </div>
+      <div id="two">
+        <ul class="ul">
+          <li><a href="#">HOME</a></li>
+          <li><a href="#">ABOUT</a></li>
+          <li><a href="#">SERVICES</a></li>
+        </ul>
+      </div>
+      <div id="three">
+        <button class="contact">CONTACT US</button>
+      </div>
+    </header>
+  </body>
+</html>
