@@ -1,9 +1,9 @@
 const students = [
-    { name: "Ali", age: 20, progress: 15 },
-    { name: "Sara", age: 18, progress: 25 },
-    { name: "Zain", age: 22, progress: 10 }
+    { name: "ABC", age: 16, progress: 10 },
+    { name: "XYZ", age: 18, progress: 20 },
+    { name: "PQR", age: 22, progress: 30 }
 ];
 
-const dataFunc = ()=> students;
+const datafunc = () => students;
 
-module.exports = {dataFunc};
+module.exports = { datafunc };
