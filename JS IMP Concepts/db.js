@@ -1,15 +1,17 @@
-const {MongoClient} = require('mongodb');
-const uri = 'mongodb+srv://barterweb:barterweb@cluster0.ukaok.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
+const { MongoClient } = require("mongodb");
+
+const uri =
+  "mongodb+srv://barterweb:barterweb@cluster0.ukaok.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 const client = new MongoClient(uri);
 
-async function mongoConnect(){
-    try {
-        await client.connect();
-        console.log('Database is Connected');
-        return client.db('mern db');
-    } catch (error) {
-        return console.log(error);
-    }
+async function connectDB() {
+  try {
+    await client.connect();
+    console.log("Connected to MongoDB!");
+    return client.db("mern_db");
+  } catch (err) {
+    console.error("Connection failed:", err);
+  }
 }
 
-mongoConnect();
+module.exports = connectDB;
