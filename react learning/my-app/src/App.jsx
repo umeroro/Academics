@@ -1,10 +1,20 @@
-import { useState } from 'react'
-import './App.css'
+import { useState } from "react";
+import Student from "./components/Student";
 
 function App() {
-  return <>
-    <h1>This is the Day 1</h1>
-  </>
+  const [students] = useState([
+    { name: "ABC", progress: 25 },
+    { name: "XYZ", progress: 15 },
+  ]);
+
+  return (
+    <div>
+      <h1>Student List</h1>
+      {students.map((student, index) => {
+        return <Student key={index} name={student.name} progress={student.progress} />;
+      })}
+    </div>
+  );
 }
 
-export default App
+export default App;
