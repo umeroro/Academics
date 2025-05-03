@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import StudentData from "./components/StudentData";
 
 const App = () => {
+
+  useEffect(()=>{
+    console.log('This is the UseEffect');
+  },[StudentData])
+
   return (
     <div>
       <h1>
