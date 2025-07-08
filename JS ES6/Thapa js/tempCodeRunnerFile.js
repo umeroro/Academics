@@ -1,2 +1,4 @@
-ew Array([1, 2, 4, 5, 6]);
-// console.log(myArr2);
+.push(dc)
+// console.log(marvel);
+
+// console.log(marvel.concat(dc))
